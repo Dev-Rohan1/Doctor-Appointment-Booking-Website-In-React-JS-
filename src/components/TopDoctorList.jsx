@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { doctors } from "../assets/assets";
+
 import SectionTtitle from "../components/SectionTtitle";
 import { SlideUp } from "../utility/Animation";
+import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
 
 const TopDoctorList = () => {
   const navigate = useNavigate();
+  const { doctors } = useContext(AppContext);
 
   return (
     <section className="py-16 overflow-y-hidden">
