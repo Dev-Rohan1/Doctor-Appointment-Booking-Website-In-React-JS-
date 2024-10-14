@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
 
 const Footer = () => {
@@ -6,7 +7,9 @@ const Footer = () => {
       <div className="container">
         <div className="flex justify-between flex-col md:flex-row flex-wrap mb-5">
           <div className="mb-4 md:mb-0 max-w-[380px]">
-            <img className="w-44 mb-4" src={assets.logo} alt="logo" />
+            <Link to={"/"}>
+              <img className="w-44 mb-4" src={assets.logo} alt="logo" />
+            </Link>
             <p className="text-gray-600 leading-relaxed">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -35,6 +38,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-black">
           <span className="text-center block py-5">
+            {" "}
             Copyright 2024 @ ❤️‍🩹Rohan❤️‍🩹 - All Right Reserved.
           </span>
         </div>

@@ -1,11 +1,11 @@
+import { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
-import { useState } from "react";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [profile, setProfile] = useState(false);
-  const [token, setToken] = useState(true);
+  const [token, setToken] = useState(false);
 
   const navigate = useNavigate();
 
@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <header className="py-5">
-      <nav className="flex items-center justify-between mb-2 container">
+      <nav className="flex items-center justify-between mb-3 container">
         {/* ========= logo ========== */}
         <Link to={"/"}>
           <img className="w-44" src={assets.logo} alt="logo" />
@@ -154,7 +154,9 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <hr className="bg-black border-none outline-none w-full h-[0.5px]" />
+      <div className="container">
+        <hr className="bg-black border-none outline-none w-full h-[0.5px] " />
+      </div>
     </header>
   );
 };

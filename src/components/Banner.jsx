@@ -11,7 +11,7 @@ const Banner = () => {
       <div className="container">
         {/* ========= banner ========= */}
         <div
-          className="bg-primery p-8 md:p-16 rounded-lg flex items-center flex-col
+          className="bg-primery p-8 md:p-16 rounded-xl flex items-center flex-col
       md:flex-row md:justify-between"
         >
           <div>
